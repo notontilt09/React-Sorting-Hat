@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Intro from './Intro'
 import Quiz from './Quiz'
+import Results from './Results'
 
 class App extends Component {
   constructor() {
@@ -65,7 +66,6 @@ class App extends Component {
     const question3 = document.querySelector('.question3');
     for (let i = 0; i < form2.length; i++) {
       if (form2[i].checked) {
-        console.log(form2[i].value);
         switch (form2[i].value) {
           case 'gryffindor':
             this.setState({...this.state, gryffindor: this.state.gryffindor + 10})
@@ -213,7 +213,7 @@ class App extends Component {
         </header>
         <Intro sortMe={this.sortMe}/>
         <Quiz 
-          houses={this.state} 
+          scores={this.state} 
           answerQuestion1={this.answerQuestion1}
           answerQuestion2={this.answerQuestion2}
           answerQuestion3={this.answerQuestion3}
@@ -221,6 +221,7 @@ class App extends Component {
           answerQuestion5={this.answerQuestion5}
           answerQuestion6={this.answerQuestion6}
         />
+        <Results scores={this.state} />
       </div>
     );
   }
