@@ -28,17 +28,20 @@ const Intro = props => {
                     <td>-20 points</td>
                 </tr>
                 <tr>
-                    <td>Going out of the castle after dark</td>
-                    <td>-50 points</td>
+                    <td>Going out of the castle after dark with your two best friends</td>
+                    <td>-150 points</td>
                 </tr>
                 <tr>
-                    <td>Saving the wizarding world from a dark wizard</td>
+                    <td>Saving the wizarding world from Voldemort</td>
                     <td>+60 points</td>
                 </tr>
              </tbody>
             </table>
-            <p className="App-intro">So you see, we'd really like you to stay inside the castle.</p>
-            <button className="sort-me">SORT ME!!!!!</button>
+            <p className="App-intro">So you see, we'd really like you to stay inside the castle and get some sleep.</p>
+            <button 
+                className="sort-me"
+                onClick={props.sortMe}    
+            >SORT ME!!!!!</button>
         </div>
     )
 }

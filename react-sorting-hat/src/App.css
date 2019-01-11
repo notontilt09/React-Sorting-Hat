@@ -50,6 +50,34 @@
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.quiz {
+  display: none;
+}
+
+.quiz.show {
+  display: block;
+}
+
+.quiz h1 {
+  text-align: center;
+}
+
+.answers {
+  margin-left: 40%;
+}
+
+.answers input {
+  margin: 20px 5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
