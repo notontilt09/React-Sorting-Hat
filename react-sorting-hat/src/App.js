@@ -20,7 +20,6 @@ class App extends Component {
     const question1= document.querySelector('.question1');
     const quiz = document.querySelector('.quiz');
     const questions = document.querySelectorAll('section');
-    console.log(questions);
     questions.forEach(question => question.classList.add('hide'));
     quiz.classList.add('show');
     question1.classList.remove('hide');
@@ -61,11 +60,12 @@ class App extends Component {
 
   answerQuestion2 = event => {
     event.preventDefault();
-    const form2 = document.querySelector('.form1');
+    const form2 = document.querySelector('.form2');
     const question2 = document.querySelector('.question2');
     const question3 = document.querySelector('.question3');
     for (let i = 0; i < form2.length; i++) {
       if (form2[i].checked) {
+        console.log(form2[i].value);
         switch (form2[i].value) {
           case 'gryffindor':
             this.setState({...this.state, gryffindor: this.state.gryffindor + 10})
